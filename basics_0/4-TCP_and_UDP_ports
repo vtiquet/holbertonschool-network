@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Displays all active IPv4 and IPv6 listening ports and their PIDs
+sudo netstat -lpn
