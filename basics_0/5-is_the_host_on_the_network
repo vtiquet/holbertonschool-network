@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Pings an IP address 5 times
+
+# Check if argument exists
+if [ -z "$1" ]; then
+    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+    exit 1
+fi
+
+# -c 5 tells ping to stop after 5 packets
+ping -c 5 "$1"
