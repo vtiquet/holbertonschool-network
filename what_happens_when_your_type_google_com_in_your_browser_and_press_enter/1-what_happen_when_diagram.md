@@ -4,6 +4,7 @@ This file should contain the **URL** to your hosted diagram. Below is a logic ma
 
 ## Mermaid Diagram Structure
 
+```mermaid
 graph TD
     subgraph Client_Side [User Browser]
         A((Type https://www.google.com)) --> B{DNS Cache?}
@@ -35,3 +36,4 @@ graph TD
     style D fill:#f96,stroke:#333,stroke-width:2px
     style FW fill:#f9f,stroke:#333,stroke-width:2px
     style LB fill:#bbf,stroke:#333,stroke-width:2px
+```
