@@ -4,18 +4,19 @@ This file should contain the **URL** to your hosted diagram. Below is a logic ma
 
 ## Mermaid Diagram Structure
 
-You can use this code at [Mermaid.live](https://mermaid.live/) to generate a schema that covers all requirements:
-
 ```mermaid
 graph TD
-    User((User types google.com)) --> DNS[DNS Resolution: Get IP]
-    DNS --> FW{Firewall Check}
-    FW -->|Authorized| LB[Load Balancer: Distribute Traffic]
-    LB -->|HTTPS/SSL Encrypted| WS[Web Server: Static Content]
-    WS --> AS[Application Server: Logic]
-    AS --> DB[(Database: Data Storage)]
+    User((Enter google.com)) --> DNS{DNS Lookup}
+    DNS -->|Get IP| TCP[TCP 3-Way Handshake]
+    TCP --> TLS[TLS 1.3 Encryption]
+    TLS --> HTTP[HTTP GET Request]
+    HTTP --> FW[Firewall]
+    FW --> LB[Load Balancer]
+    LB --> WS[Web Server]
+    WS --> AS[Application Server]
+    AS --> DB[(Database)]
     DB --> AS
     AS --> WS
-    WS --> User
+    WS -->|HTML/CSS/JS| User
 
 ```
