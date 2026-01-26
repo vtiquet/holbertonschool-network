@@ -1,0 +1,21 @@
+# Task 1: The Infrastructure Diagram (1-what_happen_when_diagram)
+
+This file should contain the **URL** to your hosted diagram. Below is a logic map you can use to build your visual in tools like `diagrams.net` or `Mermaid.js`.
+
+## Mermaid Diagram Structure
+
+You can use this code at [Mermaid.live](https://mermaid.live/) to generate a schema that covers all requirements:
+
+```mermaid
+graph TD
+    User((User types google.com)) --> DNS[DNS Resolution: Get IP]
+    DNS --> FW{Firewall Check}
+    FW -->|Authorized| LB[Load Balancer: Distribute Traffic]
+    LB -->|HTTPS/SSL Encrypted| WS[Web Server: Static Content]
+    WS --> AS[Application Server: Logic]
+    AS --> DB[(Database: Data Storage)]
+    DB --> AS
+    AS --> WS
+    WS --> User
+
+```

@@ -1,0 +1,29 @@
+# Task 0: The Blog Post (0-blog_post)
+
+This file should contain the **URL** to your published article on Medium or LinkedIn. To reach the 1,500-word requirement and impress recruiters, follow this logical flow:
+
+## 1. DNS Request (The Phonebook of the Web)
+
+* **Concept:** Your browser doesn't know where "google.com" lives. It sends a request to a DNS recursor (usually your ISP).
+* **Process:** The request travels through Root servers, TLD servers (.com), and finally Authoritative servers to find the IP address (e.g., `172.217.7.14`).
+
+## 2. TCP/IP & Firewall
+
+* **Concept:** Once the IP is known, a connection is established using the Transmission Control Protocol.
+* **Process:** The "Three-way Handshake" occurs (SYN, SYN-ACK, ACK).
+* **Security:** This request must pass through a **Firewall**, which acts as a security guard, filtering traffic based on defined rules to prevent unauthorized access.
+
+## 3. HTTPS/SSL (The Secure Tunnel)
+
+* **Concept:** To protect your data, the connection is encrypted using SSL/TLS.
+* **Process:** The browser and server perform an "SSL Handshake" to exchange keys, changing the URL from `http` to `https`.
+
+## 4. Load Balancer & Web Server
+
+* **Concept:** High-traffic sites use a **Load Balancer** to distribute incoming requests across multiple servers so no single server is overwhelmed.
+* **Web Server:** The chosen server (like Nginx or Apache) receives the request and handles static content (HTML, CSS).
+
+## 5. Application Server & Database
+
+* **Concept:** If the request requires dynamic data (like your specific search results), the Web Server talks to the **Application Server**.
+* **Database:** The Application Server queries the **Database** to retrieve or store information before sending the finished page back to the browser.
